@@ -94,7 +94,7 @@
 		var/obj/O = A
 		if(ObjCollide(O))
 			return
-	if(ismovableatom(A))
+	if(ismovable(A))
 		var/atom/movable/AM = A
 		if(PushAM(AM))
 			return

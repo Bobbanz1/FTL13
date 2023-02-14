@@ -396,5 +396,5 @@
 				if(stored)
 					DuplicateObject(stored,perfectcopy=1,newloc=T)
 			else if(right_click)
-				if(ismovableatom(object)) // No copying turfs for now.
+				if(ismovable(object)) // No copying turfs for now.
 					stored = object

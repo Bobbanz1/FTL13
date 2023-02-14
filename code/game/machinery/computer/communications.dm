@@ -129,7 +129,7 @@
 							if(SEC_LEVEL_GQ)
 								SSblackbox.inc("alert_comms_gq",1)
 					tmp_alertlevel = 0
-				else:
+				else
 					to_chat(usr, "<span class='warning'>You are not authorized to do this!</span>")
 					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)
 					tmp_alertlevel = 0

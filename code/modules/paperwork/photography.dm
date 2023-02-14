@@ -221,7 +221,7 @@
 
 		var/offX = 32 * (A.x - center.x) + A.pixel_x + 33
 		var/offY = 32 * (A.y - center.y) + A.pixel_y + 33
-		if(ismovableatom(A))
+		if(ismovable(A))
 			offX += A:step_x
 			offY += A:step_y
 

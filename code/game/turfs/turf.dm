@@ -410,7 +410,7 @@
 	for(var/V in contents)
 		var/atom/A = V
 		if(A.level >= affecting_level)
-			if(ismovableatom(A))
+			if(ismovable(A))
 				var/atom/movable/AM = A
 				if(!AM.ex_check(explosion_id))
 					continue

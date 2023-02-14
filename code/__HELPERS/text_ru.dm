@@ -1,5 +1,5 @@
 // Here there are processes designed to work with the Cyrillic alphabet.
-// In particular, most of the code that fixes the "ß" is right there.
+// In particular, most of the code that fixes the "ï¿½" is right there.
 
 
 
@@ -10,7 +10,7 @@
 
 /proc/sanitize_russian(t)
 	t = strip_macros(t)
-	return replacetext(t, "ÿ", "&#x044f;")
+	return replacetext(t, "ï¿½", "&#x044f;")
 
 /proc/russian_html2text(t)
 	return replacetext(t, "&#x044f;", "&#255;")
@@ -21,7 +21,7 @@
 /proc/rhtml_encode(t)
 	t = rhtml_decode(t)
 	t = strip_macros(t)
-	var/list/c = splittext(t, "ÿ")
+	var/list/c = splittext(t, "ï¿½")
 	if(c.len == 1)
 		return html_encode(t)
 	var/out = ""
@@ -34,8 +34,8 @@
 	return out
 
 /proc/rhtml_decode(var/t)
-	t = replacetext(t, "&#x044f;", "ÿ")
-	t = replacetext(t, "&#255;", "ÿ")
+	t = replacetext(t, "&#x044f;", "ï¿½")
+	t = replacetext(t, "&#255;", "ï¿½")
 	t = html_decode(t)
 	return t
 
@@ -95,40 +95,40 @@
 
 
 GLOBAL_LIST_INIT(rus_unicode_conversion,list(
-	"À" = "0410", "à" = "0430",
-	"Á" = "0411", "á" = "0431",
-	"Â" = "0412", "â" = "0432",
-	"Ã" = "0413", "ã" = "0433",
-	"Ä" = "0414", "ä" = "0434",
-	"Å" = "0415", "å" = "0435",
-	"Æ" = "0416", "æ" = "0436",
-	"Ç" = "0417", "ç" = "0437",
-	"È" = "0418", "è" = "0438",
-	"É" = "0419", "é" = "0439",
-	"Ê" = "041a", "ê" = "043a",
-	"Ë" = "041b", "ë" = "043b",
-	"Ì" = "041c", "ì" = "043c",
-	"Í" = "041d", "í" = "043d",
-	"Î" = "041e", "î" = "043e",
-	"Ï" = "041f", "ï" = "043f",
-	"Ð" = "0420", "ð" = "0440",
-	"Ñ" = "0421", "ñ" = "0441",
-	"Ò" = "0422", "ò" = "0442",
-	"Ó" = "0423", "ó" = "0443",
-	"Ô" = "0424", "ô" = "0444",
-	"Õ" = "0425", "õ" = "0445",
-	"Ö" = "0426", "ö" = "0446",
-	"×" = "0427", "÷" = "0447",
-	"Ø" = "0428", "ø" = "0448",
-	"Ù" = "0429", "ù" = "0449",
-	"Ú" = "042a", "ú" = "044a",
-	"Û" = "042b", "û" = "044b",
-	"Ü" = "042c", "ü" = "044c",
-	"Ý" = "042d", "ý" = "044d",
-	"Þ" = "042e", "þ" = "044e",
-	"ß" = "042f", "ÿ" = "044f",
+	"ï¿½" = "0410", "ï¿½" = "0430",
+	"ï¿½" = "0411", "ï¿½" = "0431",
+	"ï¿½" = "0412", "ï¿½" = "0432",
+	"ï¿½" = "0413", "ï¿½" = "0433",
+	"ï¿½" = "0414", "ï¿½" = "0434",
+	"ï¿½" = "0415", "ï¿½" = "0435",
+	"ï¿½" = "0416", "ï¿½" = "0436",
+	"ï¿½" = "0417", "ï¿½" = "0437",
+	"ï¿½" = "0418", "ï¿½" = "0438",
+	"ï¿½" = "0419", "ï¿½" = "0439",
+	"ï¿½" = "041a", "ï¿½" = "043a",
+	"ï¿½" = "041b", "ï¿½" = "043b",
+	"ï¿½" = "041c", "ï¿½" = "043c",
+	"ï¿½" = "041d", "ï¿½" = "043d",
+	"ï¿½" = "041e", "ï¿½" = "043e",
+	"ï¿½" = "041f", "ï¿½" = "043f",
+	"ï¿½" = "0420", "ï¿½" = "0440",
+	"ï¿½" = "0421", "ï¿½" = "0441",
+	"ï¿½" = "0422", "ï¿½" = "0442",
+	"ï¿½" = "0423", "ï¿½" = "0443",
+	"ï¿½" = "0424", "ï¿½" = "0444",
+	"ï¿½" = "0425", "ï¿½" = "0445",
+	"ï¿½" = "0426", "ï¿½" = "0446",
+	"ï¿½" = "0427", "ï¿½" = "0447",
+	"ï¿½" = "0428", "ï¿½" = "0448",
+	"ï¿½" = "0429", "ï¿½" = "0449",
+	"ï¿½" = "042a", "ï¿½" = "044a",
+	"ï¿½" = "042b", "ï¿½" = "044b",
+	"ï¿½" = "042c", "ï¿½" = "044c",
+	"ï¿½" = "042d", "ï¿½" = "044d",
+	"ï¿½" = "042e", "ï¿½" = "044e",
+	"ï¿½" = "042f", "ï¿½" = "044f",
 
-	"¨" = "0401", "¸" = "0451"
+	"ï¿½" = "0401", "ï¿½" = "0451"
 	))
 
 GLOBAL_LIST_INIT(rus_unicode_fix,null)
@@ -143,10 +143,10 @@ GLOBAL_LIST_INIT(rus_unicode_fix,null)
 	return text
 
 /proc/r_text2ascii(t)
-	t = replacetext(t, "&#x044f;", "ÿ")
-	t = replacetext(t, "&#255;", "ÿ")
+	t = replacetext(t, "&#x044f;", "ï¿½")
+	t = replacetext(t, "&#255;", "ï¿½")
 	var/output = ""
-	var/L = lentext(t)
+	var/L = length(t)
 	for(var/i = 1 to L)
 		output += "&#[text2ascii(t,i)];"
 	return output
@@ -167,7 +167,7 @@ GLOBAL_LIST_INIT(rus_unicode_fix,null)
 	if(!GLOB.rus_unicode_fix)
 		GLOB.rus_unicode_fix = list()
 		for(var/s in GLOB.rus_unicode_conversion)
-			if(s == "ÿ")
+			if(s == "ï¿½")
 				GLOB.rus_unicode_fix["&#x044f;"] = "\\u[GLOB.rus_unicode_conversion[s]]"
 				continue
 

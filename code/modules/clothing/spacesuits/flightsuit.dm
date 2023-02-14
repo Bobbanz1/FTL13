@@ -507,7 +507,7 @@
 		damage = TRUE
 		density = TRUE
 		anchored = TRUE
-	else if(ismovableatom(unmovablevictim))
+	else if(ismovable(unmovablevictim))
 		var/atom/movable/victim = unmovablevictim
 		if(crashpower < 3 || victim.throwing)
 			crashing = FALSE

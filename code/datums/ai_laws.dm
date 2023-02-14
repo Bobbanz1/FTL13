@@ -240,7 +240,7 @@
 		if(3)
 			pick_weighted_lawset()
 
-		else:
+		else
 			log_law("Invalid law config. Please check silicon_laws.txt")
 			add_inherent_law("You may not injure crewmembers or, through inaction, allow crewmembers to come to harm.")
 			add_inherent_law("You must obey orders given to you by crewmembers, except where such orders would conflict with the First Law.")

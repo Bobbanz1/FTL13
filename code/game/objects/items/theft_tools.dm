@@ -216,7 +216,7 @@
 /obj/item/weapon/hemostat/supermatter/afterattack(atom/O, mob/user, proximity)
 	if(!sliver)
 		return
-	if(ismovableatom(O) && O != sliver)
+	if(ismovable(O) && O != sliver)
 		Consume(O)
 		to_chat(usr, "<span class='notice'>\The [sliver] is dusted along with \the [O]!</span>")
 		QDEL_NULL(sliver)
